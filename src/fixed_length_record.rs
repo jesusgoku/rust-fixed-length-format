@@ -22,7 +22,8 @@ pub struct FixedLengthRecord<'a> {
 }
 
 impl FixedLengthRecord<'_> {
-    pub fn build(&self, data: &HashMap<&str, &str>) -> String {
+    // pub fn build(&self, data: &HashMap<&str, &str>) -> String {
+    pub fn build(&self, data: &HashMap<&str, String>) -> String {
         let fields: Vec<String> = self
             .fields
             .iter()
